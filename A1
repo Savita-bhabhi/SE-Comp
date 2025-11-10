@@ -1,0 +1,53 @@
+# Python program to manage library book borrowing records
+
+# Sample data
+# Let's store member borrow counts in a list (each element = number of books borrowed by a member)
+member_borrow_counts = [3, 5, 0, 2, 7, 0, 4, 7, 2]
+
+# Let's store book borrowing counts in a dictionary (key = book name, value = times borrowed)
+book_borrow_counts = {
+    "DSA": 15,
+    "Java": 8,
+    "Python": 22,
+    "Maths": 5,
+    "English": 22,
+    "C Programming": 3
+}
+
+# 1) Average number of books borrowed by members
+def average_books_borrowed(member_counts):
+    total = sum(member_counts)
+    count = len(member_counts)
+    return total / count if count != 0 else 0
+
+
+# 2) Book with highest and lowest borrow count
+def highest_and_lowest_borrowed_books(book_counts):
+    highest = max(book_counts, key=book_counts.get)
+    lowest = min(book_counts, key=book_counts.get)
+    return highest, lowest
+
+
+# 3) Count members who have borrowed 0 books
+def count_zero_borrowers(member_counts):
+    return member_counts.count(0)
+
+
+# 4) Most frequently borrowed book (Mode)
+def most_frequently_borrowed_book(book_counts):
+    max_value = max(book_counts.values())
+    # There can be multiple books with same highest count
+    mode_books = [book for book, count in book_counts.items() if count == max_value]
+    return mode_books
+
+
+# Display Results
+print("Average books borrowed:", average_books_borrowed(member_borrow_counts))
+
+high, low = highest_and_lowest_borrowed_books(book_borrow_counts)
+print("Highest borrowed book:", high)
+print("Lowest borrowed book:", low)
+
+print("Members with zero borrowings:", count_zero_borrowers(member_borrow_counts))
+
+print("Most frequently borrowed book(s):", most_frequently_borrowed_book(book_borrow_counts))
