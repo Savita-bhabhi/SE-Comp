@@ -4,8 +4,8 @@
 • Count the number of members who have not borrowed any books (i.e., members having a borrow count of 0).
 • Display the most frequently borrowed book (i.e., find the mode of the borrow counts).
 -->
-import java.util.*;
 
+import java.util.*;
 public class LibraryRecords {
 
     public static void main(String[] args) {
@@ -60,6 +60,7 @@ public class LibraryRecords {
         System.out.println("Most frequently borrowed count (Mode): " + mode);
     }
 }
+
 2)In an e-commerce system, customer account IDs are stored in a list. 
 You are required to write a program that performs the following operations:
 
@@ -67,8 +68,8 @@ You are required to write a program that performs the following operations:
 
 • Binary Search: Implement the binary search algorithm to check whether a customer account ID exists in the list
 -->
-import java.util.*;
 
+import java.util.*;
 public class CustomerSearch {
 
     // Linear Search
@@ -125,14 +126,15 @@ public class CustomerSearch {
         sc.close();
     }
 }
+
 3)In a company, employee salaries are stored in a list as floating-point numbers. 
 Write a program that sorts the employee salaries in ascending order using the following two sorting algorithms:
 • Selection Sort: Sort the salaries using the selection sort algorithm.
 • Bubble Sort: Sort the salaries using the bubble sort algorithm.
 After sorting the salaries, the program should display the top five highest salaries in the company.
 -->
-import java.util.*;
 
+import java.util.*;
 public class SalarySorting {
 
     // Selection Sort
@@ -207,8 +209,8 @@ The system should support the following operations:
 • Redo Action: Reapply the most recently undone action.
 • Display Document State: Show the current state of the document after undoing or redoing an action.
 -->
-import java.util.*;
 
+import java.util.*;
 public class TextEditor {
 
     static Stack<String> undoStack = new Stack<>();
@@ -288,6 +290,7 @@ public class TextEditor {
     }
 }
 
+
 2)Implement a real-time event processing system using a Queue data structure. 
 The system should support the following features:
 • Add an Event: When a new event occurs, it should be added to the event queue.
@@ -295,8 +298,8 @@ The system should support the following features:
 • Display Pending Events: Show all the events currently waiting to be processed.
 • Cancel an Event: An event can be canceled if it has not yet been processed.
 -->
-import java.util.*;
 
+import java.util.*;
 public class EventProcessingSystem {
 
     static Queue<String> eventQueue = new LinkedList<>();
@@ -382,6 +385,7 @@ public class EventProcessingSystem {
         sc.close();
     }
 }
+
 3)A call center receives incoming calls, and each call is assigned a unique customer ID.
 The calls are answered in the order they are received. 
 Your task is to simulate the call queue of the call center using a Queue data structure.
@@ -391,8 +395,8 @@ The system should provide the following operations:
 • viewQueue(): View all calls currently in the queue without removing them.
 • isQueueEmpty(): Check if the queue is empty.
 -->
-import java.util.*;
 
+import java.util.*;
 class Call {
     int customerID;
     int callTime;
@@ -491,13 +495,14 @@ public class CallCenterQueue {
         sc.close();
     }
 }
+
 4)Create a Student Record Management System using a linked list.
 • Use a singly or doubly linked list to store student data (Roll No, Name, Marks).
 • Perform operations: Add, Delete, Update, Search, and Sort.
 • Display records in ascending or descending order based on marks or roll number.
 -->
-import java.util.*;
 
+import java.util.*;
 class Student {
     int rollNo;
     String name;
@@ -661,6 +666,7 @@ public class StudentRecordSystem {
         } while(choice != 7);
     }
 }
+
                       Group c
 1)Implement a hash table of size 10 using the division method as the hash function.
 Resolve collisions using chaining (linked lists). Provide the following operations:
@@ -668,8 +674,8 @@ insert(key, value): Insert a key–value pair.
 search(key): Return the value associated with a key (or indicate not found).
 delete(key): Remove the key–value pair from the hash table. 
 -->
-import java.util.*;
 
+import java.util.*;
 class HashTableChaining {
     private static class Entry {
         int key;
@@ -766,6 +772,7 @@ class HashTableChaining {
         ht.printTable();
     }
 }
+
 2)Design and implement a hash table of fixed size. Use the division method for the hash function and
 resolve collisions using linear probing. Allow the user to perform the following operations:
 • Insert a key
@@ -773,8 +780,8 @@ resolve collisions using linear probing. Allow the user to perform the following
 • Delete a key
 • Display the table
 -->
-import java.util.*;
 
+import java.util.*;
 public class LinearProbingHashTable {
 
     static int SIZE = 10;
@@ -882,6 +889,7 @@ public class LinearProbingHashTable {
         sc.close();
     }
 }
+
 3)Implement a hash table using extendible hashing. The hash table should dynamically expand
 when the number of keys in a bucket exceeds a certain threshold. Perform the following operations:
 
@@ -889,8 +897,8 @@ when the number of keys in a bucket exceeds a certain threshold. Perform the fol
 • Search(key): Search for the value associated with a given key
 • Delete(key): Delete a key-value pair from the hash table
 -->
-import java.util.*;
 
+import java.util.*;
 class Bucket {
     int localDepth;
     List<Integer> keys = new ArrayList<>();
@@ -1018,6 +1026,7 @@ public class ExtendibleHashing {
         display();
     }
 }
+ 
                                Group D  
 1)Consider a particular area in your city. Note the popular locations A, B, C, etc.,
 in that area. Assume these locations represent nodes of a graph. If there is a route between two locations,
@@ -1029,8 +1038,8 @@ Represent the graph:
 • Using an adjacency matrix to perform DFS
 • Using an adjacency list to perform BFS
 -->
-import java.util.*;
 
+import java.util.*;
 public class GraphTraversal {
 
     // ----- DFS using Adjacency Matrix -----
@@ -1100,12 +1109,13 @@ public class GraphTraversal {
         bfs(adjList, 0);
     }
 }
+
 2)A pizza shop receives multiple orders from several locations. Assume that one pizza delivery boy needs to deliver pizzas to nearby locations,
 which are represented using a graph. The time required to travel between two locations represents the edge weight.
 Solve the problem of delivering pizza to all customers in the minimum possible time. Use an appropriate data structure.
 -->
-import java.util.*;
 
+import java.util.*;
 class Node implements Comparable<Node> {
     int vertex, time;
 
@@ -1167,10 +1177,11 @@ public class PizzaDelivery {
         dijkstra(graph, 0);
     }
 }
+
 3)Implement various operations on a Binary Search Tree (BST), such as insertion, deletion, display, and search.
 -->
-import java.util.*;
 
+import java.util.*;
 class Node {
     int data;
     Node left, right;
@@ -1292,11 +1303,12 @@ public class BSTOperations {
         sc.close();
     }
 }
+
 4)Construct an expression tree from the given prefix expression (for example: +-*a bc / d e f).
 Traverse the expression tree using post-order traversal (non-recursive), and then delete the entire tree.
 -->
-import java.util.*;
 
+import java.util.*;
 class Node {
     char data;
     Node left, right;
@@ -1382,6 +1394,7 @@ public class ExpressionTree {
         root = deleteTree(root);
     }
 }
+
 5)A list stores city names and their populations. Use a Binary Search Tree (BST) for implementation.
 Provide features to:
 • Add a new city
@@ -1390,8 +1403,8 @@ Provide features to:
 • Display all city names in ascending/descending order
 Also, determine how many maximum comparisons are required to search for a particular city.
 -->
-import java.util.*;
 
+import java.util.*;
 class CityNode {
     String name;
     int population;
@@ -1573,12 +1586,13 @@ public class CityBST {
         } while (choice != 7);
     }
 }
+
 6)Read a propositional logic formula.
 Write a function that reads the formula and constructs its binary expression tree. 
 Then state the time complexity of the function.
 -->
-import java.util.*;
 
+import java.util.*;
 class Node {
     String value;
     Node left, right;
